@@ -12,14 +12,14 @@ class FiveDayForecast {
   @JsonKey(name: 'cnt')
   final int count;
   @JsonKey(name: 'list')
-  final List<ForecastPeriod> forecastList;
+  final List<ForecastPeriod> periodList;
   final City city;
 
   FiveDayForecast({
     required this.code,
     required this.message,
     required this.count,
-    required this.forecastList,
+    required this.periodList,
     required this.city,
   });
 
