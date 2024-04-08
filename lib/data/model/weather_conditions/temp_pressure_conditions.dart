@@ -10,7 +10,7 @@ class TempPressureConditions {
   @JsonKey(name: 'temp_min')
   final double minTemperature;
   @JsonKey(name: 'temp_max')
-  final double maxTempaerature;
+  final double maxTemperature;
 
   /// Unité : hPa
   final double pressure;
@@ -26,7 +26,7 @@ class TempPressureConditions {
     required this.temp,
     required this.feelsLike,
     required this.minTemperature,
-    required this.maxTempaerature,
+    required this.maxTemperature,
     required this.pressure,
     required this.seaLevelPressure,
     required this.groundLevelPressure,
