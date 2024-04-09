@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meteo_sncf/app_theme.dart';
 import 'package:meteo_sncf/view/city_weather/city_weather_screen.dart';
 
 void main() {
@@ -12,10 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.theme,
+      debugShowCheckedModeBanner: false,
       home: CityWeatherScreen(),
     );
   }
