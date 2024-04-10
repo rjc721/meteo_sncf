@@ -1,5 +1,5 @@
-import 'package:meteo_sncf/data/model/forecast_period.dart';
-import 'package:meteo_sncf/data/open_weather_repository.dart';
+import 'package:meteo_sncf/data/weather/open_weather_repository.dart';
+import 'package:meteo_sncf/data/weather/model/forecast_period.dart';
 import 'package:meteo_sncf/service/model/city_forecast.dart';
 import 'package:meteo_sncf/service/model/weather_day.dart';
 import 'package:meteo_sncf/service/model/weather_reading.dart';
