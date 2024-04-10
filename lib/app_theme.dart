@@ -3,6 +3,10 @@ import 'package:meteo_sncf/app_colors.dart';
 
 class AppTheme {
   static ThemeData get theme => ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.primaryBackground,
+          foregroundColor: Colors.white,
+        ),
         scaffoldBackgroundColor: AppColors.primaryBackground,
         inputDecorationTheme: InputDecorationTheme(
           border: const OutlineInputBorder(
@@ -37,6 +41,7 @@ class AppTheme {
         progressIndicatorTheme: ProgressIndicatorThemeData(
           color: AppColors.actionLightBlue,
         ),
+        dividerTheme: DividerThemeData(color: AppColors.actionLightBlue),
         useMaterial3: true,
       );
 }
