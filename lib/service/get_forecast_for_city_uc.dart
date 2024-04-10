@@ -1,3 +1,4 @@
+import 'package:get_it/get_it.dart';
 import 'package:meteo_sncf/data/weather/open_weather_repository.dart';
 import 'package:meteo_sncf/data/weather/model/forecast_period.dart';
 import 'package:meteo_sncf/service/model/city_forecast.dart';
@@ -5,7 +6,7 @@ import 'package:meteo_sncf/service/model/weather_day.dart';
 import 'package:meteo_sncf/service/model/weather_reading.dart';
 
 class GetForecastForCityUC {
-  final OpenWeatherRepository _openWeatherRepository = OpenWeatherRepository();
+  final _openWeatherRepository = GetIt.I<OpenWeatherRepository>();
 
   Future<CityForecast> handle(String cityName) {
     // TODO: Handle doing the geocode for the city coordinates

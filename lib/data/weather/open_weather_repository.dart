@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
 import 'package:meteo_sncf/data/weather/model/five_day_forecast.dart';
 
 class OpenWeatherRepository {
-  final Dio _dio = Dio(); // TODO: Register in GetIt avec une config
+  final Dio _dio = GetIt.I<Dio>();
   static const String _weatherApiUrl =
       'http://api.openweathermap.org/data/2.5/forecast';
   static const String _iconApiUrl =

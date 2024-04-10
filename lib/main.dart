@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meteo_sncf/app_theme.dart';
-import 'package:meteo_sncf/view/city_weather/city_weather_screen.dart';
+import 'package:meteo_sncf/dependency_register.dart';
+import 'package:meteo_sncf/view/login/login_screen.dart';
 
-void main() {
+void main() async {
+  await DependencyRegister.register();
   runApp(const MyApp());
 }
 
@@ -14,8 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.theme,
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
-      home: CityWeatherScreen(),
+      // home: CityWeatherScreen(),
     );
   }
 }
