@@ -34,9 +34,7 @@ class LoginScreen extends StatelessWidget {
                 _showErrorSnackbar(context);
               }
               if (state is LoginFinished) {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => CityWeatherScreen()),
-                );
+                _pushWeatherScreen(context, userName: state.userName);
               }
             },
           ),
@@ -112,5 +110,11 @@ class LoginScreen extends StatelessWidget {
       showCloseIcon: true,
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  void _pushWeatherScreen(BuildContext context, {required String userName}) {
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
+      builder: (context) => CityWeatherScreen(userName: userName),
+    ));
   }
 }

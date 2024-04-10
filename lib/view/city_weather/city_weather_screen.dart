@@ -7,13 +7,15 @@ import 'package:meteo_sncf/view/city_weather/widgets/forecast_view_widget.dart';
 import 'package:meteo_sncf/view/login/login_screen.dart';
 
 class CityWeatherScreen extends StatelessWidget {
-  const CityWeatherScreen({super.key});
+  final String userName;
+
+  const CityWeatherScreen({super.key, required this.userName});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Bienvenue, Ryan'),
+          title: Text('Bienvenue, ${userName}'),
           actions: [
             IconButton(
                 onPressed: () => _logout(context),
