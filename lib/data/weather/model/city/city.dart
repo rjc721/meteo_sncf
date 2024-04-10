@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meteo_sncf/data/model/city/coords.dart';
+import 'package:meteo_sncf/data/weather/model/city/coords.dart';
 
 part 'city.g.dart';
 

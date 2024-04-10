@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meteo_sncf/data/model/city/city.dart';
-import 'package:meteo_sncf/data/model/forecast_period.dart';
+import 'package:meteo_sncf/data/weather/model/city/city.dart';
+import 'package:meteo_sncf/data/weather/model/forecast_period.dart';
 
 part 'five_day_forecast.g.dart';
 

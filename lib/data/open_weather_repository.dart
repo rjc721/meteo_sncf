@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:meteo_sncf/data/model/five_day_forecast.dart';
+import 'package:meteo_sncf/data/weather/model/five_day_forecast.dart';
 
 class OpenWeatherRepository {
   final Dio _dio = Dio(); // TODO: Register in GetIt avec une config

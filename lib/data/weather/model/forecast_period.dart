@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meteo_sncf/data/model/daytime_info.dart';
-import 'package:meteo_sncf/data/model/weather_conditions/clouds.dart';
-import 'package:meteo_sncf/data/model/weather_conditions/precipitation.dart';
-import 'package:meteo_sncf/data/model/weather_conditions/temp_pressure_conditions.dart';
-import 'package:meteo_sncf/data/model/weather_conditions/weather.dart';
-import 'package:meteo_sncf/data/model/weather_conditions/wind.dart';
+import 'package:meteo_sncf/data/weather/model/daytime_info.dart';
+import 'package:meteo_sncf/data/weather/model/weather_conditions/clouds.dart';
+import 'package:meteo_sncf/data/weather/model/weather_conditions/precipitation.dart';
+import 'package:meteo_sncf/data/weather/model/weather_conditions/temp_pressure_conditions.dart';
+import 'package:meteo_sncf/data/weather/model/weather_conditions/weather.dart';
+import 'package:meteo_sncf/data/weather/model/weather_conditions/wind.dart';
 
 part 'forecast_period.g.dart';
 
