@@ -11,6 +11,7 @@ class AppTheme {
           ),
           filled: true,
           fillColor: AppColors.secondaryBackground,
+          errorStyle: const TextStyle(color: Colors.white),
           hintStyle: TextStyle(color: Colors.white.withOpacity(0.5)),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
