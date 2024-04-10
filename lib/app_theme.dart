@@ -42,6 +42,11 @@ class AppTheme {
           color: AppColors.actionLightBlue,
         ),
         dividerTheme: DividerThemeData(color: AppColors.actionLightBlue),
+        popupMenuTheme: PopupMenuThemeData(
+          color: AppColors.secondaryBackground,
+          labelTextStyle: MaterialStateProperty.all<TextStyle>(
+              TextStyle(color: Colors.white)),
+        ),
         useMaterial3: true,
       );
 }

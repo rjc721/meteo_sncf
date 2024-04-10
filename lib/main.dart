@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.theme,
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
-      // home: CityWeatherScreen(),
     );
   }
 }

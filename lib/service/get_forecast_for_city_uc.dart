@@ -2,16 +2,16 @@ import 'package:get_it/get_it.dart';
 import 'package:meteo_sncf/data/weather/open_weather_repository.dart';
 import 'package:meteo_sncf/data/weather/model/forecast_period.dart';
 import 'package:meteo_sncf/service/model/city_forecast.dart';
+import 'package:meteo_sncf/service/model/sncf_city.dart';
 import 'package:meteo_sncf/service/model/weather_day.dart';
 import 'package:meteo_sncf/service/model/weather_reading.dart';
 
 class GetForecastForCityUC {
   final _openWeatherRepository = GetIt.I<OpenWeatherRepository>();
 
-  Future<CityForecast> handle(String cityName) {
-    // TODO: Handle doing the geocode for the city coordinates
+  Future<CityForecast> handle(SNCFCity city) {
     return _openWeatherRepository
-        .getForecast(latitude: 48.8543789, longitude: 2.3418425)
+        .getForecast(latitude: city.latitude, longitude: city.longitude)
         .then((fiveDayForecast) {
       final weatherReadings = fiveDayForecast.periodList
           .map((period) => _getWeatherReadingsForForecastPeriod(period));

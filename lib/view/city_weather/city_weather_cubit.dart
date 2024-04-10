@@ -1,20 +1,22 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:meteo_sncf/service/get_forecast_for_city_uc.dart';
+import 'package:meteo_sncf/service/model/sncf_city.dart';
 import 'package:meteo_sncf/view/city_weather/city_weather_state.dart';
 
 class CityWeatherCubit extends Cubit<CityWeatherState> {
-  CityWeatherCubit() : super(CityWeatherLoadStarted()) {
-    _loadForecast();
+  CityWeatherCubit() : super(CityWeatherInitial()) {
+    _loadForecast(state.selectedCity);
   }
 
-  void _loadForecast() async {
+  void _loadForecast(SNCFCity city) async {
     try {
-      // TODO: Enum des villes avec latitude/longitude
-      final forecast = await GetIt.I<GetForecastForCityUC>().handle('Paris');
-      emit(CityWeatherLoaded(cityForecast: forecast));
+      final forecast = await GetIt.I<GetForecastForCityUC>().handle(city);
+      emit(CityWeatherLoaded(selectedCity: city, cityForecast: forecast));
     } catch (_) {
-      emit(CityWeatherFailed());
+      emit(CityWeatherFailed(selectedCity: state.selectedCity));
     }
   }
+
+  void selectCity(SNCFCity city) => _loadForecast(city);
 }
