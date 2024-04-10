@@ -34,6 +34,9 @@ class AppTheme {
             ),
           ),
         ),
+        progressIndicatorTheme: ProgressIndicatorThemeData(
+          color: AppColors.actionLightBlue,
+        ),
         useMaterial3: true,
       );
 }
