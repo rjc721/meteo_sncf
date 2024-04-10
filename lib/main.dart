@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:meteo_sncf/app_theme.dart';
 import 'package:meteo_sncf/dependency_register.dart';
 import 'package:meteo_sncf/view/login/login_screen.dart';
@@ -13,8 +14,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+    ));
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SNCF Connect Météo',
       theme: AppTheme.theme,
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
