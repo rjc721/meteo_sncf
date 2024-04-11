@@ -9,7 +9,7 @@ class CityWeatherCubit extends Cubit<CityWeatherState> {
     _loadForecast(state.selectedCity);
   }
 
-  void _loadForecast(SNCFCity city) async {
+  Future<void> _loadForecast(SNCFCity city) async {
     try {
       final forecast = await GetIt.I<GetForecastForCityUC>().handle(city);
       emit(CityWeatherLoaded(selectedCity: city, cityForecast: forecast));
@@ -17,6 +17,8 @@ class CityWeatherCubit extends Cubit<CityWeatherState> {
       emit(CityWeatherFailed(selectedCity: state.selectedCity));
     }
   }
+
+  Future<void> refreshWeather() => _loadForecast(state.selectedCity);
 
   void selectCity(SNCFCity city) => _loadForecast(city);
 }

@@ -56,7 +56,10 @@ class CityWeatherScreen extends StatelessWidget {
   Widget _buildBodyForState(CityWeatherState state) {
     switch (state) {
       case CityWeatherLoaded():
-        return ForecastViewWidget(forecast: state.cityForecast);
+        return ForecastViewWidget(
+          forecast: state.cityForecast,
+          onPullToRefresh: _weatherCubit.refreshWeather,
+        );
       case CityWeatherLoadStarted():
       default:
         return const Center(child: CircularProgressIndicator());

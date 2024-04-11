@@ -18,6 +18,13 @@ class IconWeatherReadingWidget extends StatelessWidget {
             style: const TextStyle(color: Colors.white),
           ),
           Image.network(reading.conditionIconUrl, width: 64, height: 64),
+          Text(
+            '${reading.temperature}°',
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );
